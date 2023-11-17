@@ -1,0 +1,17 @@
+{
+    "name": "sebastijansakac/inspire",
+    "autoload": {
+        "psr-4": {
+            "Sakac\\Inspire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sebastijan Sakac",
+            "email": "sebastijan.sakac@icloud.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    }
+}
