@@ -2,6 +2,7 @@
 
 namespace Sakac\Inspire\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use OpenApi\Attributes\Get;
 use OpenApi\Attributes\Response;
 use Sakac\Inspire\Inspire;
@@ -33,10 +34,10 @@ class InspirationController
             ),
         ],
     )]
-    public function __invoke(Inspire $inspire): string
+    public function __invoke(Inspire $inspire): JsonResponse
     {
-        $quote = $inspire->justDoIt();
-
-        return view('inspire::index', compact('quote'));
+        return new JsonResponse([
+            'quote' => $inspire->justDoIt(),
+        ]);
     }
 }
